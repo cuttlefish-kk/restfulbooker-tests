@@ -6,7 +6,8 @@ BASE = "https://restful-booker.herokuapp.com"   # 或 "http://localhost:3001" �
 def test_ping():
     r = requests.get(f"{BASE}/ping")
     assert r.status_code in (200, 201)
-
+def test_fail():
+    assert 1 == 2
 def test_create_get_update_delete_booking():
     # 1. 创建 booking
     booking = {
